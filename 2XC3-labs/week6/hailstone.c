@@ -7,7 +7,8 @@ long hailstone(long n)
             return EXIT_FAILURE;
     }
     else if (n > 1) {
-        printf("%ld\n", n);
+        printf("%ld\t", n);
+	fflush(stdout);
         if(n % 2 == 0) {
             return hailstone(n/2);
         }
@@ -16,11 +17,12 @@ long hailstone(long n)
         }
     }
     else {
-            printf("%ld\n", n);
+            printf("%ld\t", n);
+	    fflush(stdout);
             return EXIT_SUCCESS;
     }   
 }
 int main()
 {
-    hailstone(3-50);
+    hailstone(3);
 }
